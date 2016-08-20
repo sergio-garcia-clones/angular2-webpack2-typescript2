@@ -9,7 +9,6 @@ coverage
 .lock-wscript
 .DS_Store
 ehthumbs.db
-Icon?
 Thumbs.db
 node_modules
 typings
