@@ -3,6 +3,7 @@ Simple Angular2 starter using Webpack2/Typescript2.
 
 # Table of Contents
 * [Introduction](#introduction)
+   * [Quick Start Docker](#quick-start)
 * [Features](#features)
   * [Tech Stack] (#tech-stack)
   * [Application] (#application)
@@ -21,11 +22,25 @@ Simple Angular2 starter using Webpack2/Typescript2.
 # Introduction
 The sample application features Angular2-Material demos
 
-You can use this repo locally or with Docker (recommended).
+You can use this repo locally or with `Docker` (recommended).
 
-* For MacOS, please use Docker for Mac
-* For Windows, please use Docker for Windows
-* For Linux, just use Docker :)
+* For MacOS, please use `Docker for Mac`
+* For Windows, please use `Docker for Windows`
+* For Linux, just use `Docker` :)
+
+## Quick Start
+If you're using `Docker`, life is so much easier:
+```bash
+# Clone repo and enter folder
+git clone https://github.com/spock123/angular2-webpack2-typescript2.git
+cd angular2-webpack2-typescript2
+
+# Serve and start development!
+npm run docker:serve
+
+# Open localhost:8080 and enjoy the show
+```
+
 
 # Features
 
@@ -36,6 +51,7 @@ The repo uses the following technologies:
 * Webpack 2.1
 * Typescript 2.x
 * Angular2 Material alpha 0.7-4
+* Docker container for workflows
 
 ## Application
 The demo application showcases:
@@ -60,10 +76,10 @@ The build process performs the following optimizations:
 
 * `node` and `npm` 
 * Ensure you're running the latest versions Node (v.4 or higher)  and NPM (v.3 or higher)
-* If you use Docker, have latest version installed which supports `docker-compose` v2
+* If you use `Docker`, have latest version installed which supports `docker-compose` v2
 
 ## Global Dependencies
-If you want to run locally without Docker, you should install the following global dependencies: typescript2.x, webpack2.x, webpack-devel-server, http-server:
+If you want to run locally without `Docker`, you should install the following global dependencies: typescript2.x, webpack2.x, webpack-devel-server, http-server:
 
 ```bash
 # Install global dependencies (not needed if you use Docker)
