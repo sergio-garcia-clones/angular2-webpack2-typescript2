@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+
+   frontend:
+      container_name: frontend
+      build:
+         context: .
+         dockerfile: docker/Dockerfile-frontend
+      volumes:
+         - .:/project
+         - /project/node_modules
+      ports:
+         - "8080:8080"
+      command: "npm run build"
+      environment:
+         - NODE_ENV=production
+      networks:
+         - angular
+         
+networks:
+   angular:
+      driver: bridge

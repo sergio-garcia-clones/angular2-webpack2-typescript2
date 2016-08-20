@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    "target"  : "es5",
+    "module"  : "commonjs",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "strictNullChecks": false,
+    "pretty"  : true,
+    "noEmitHelpers": true,
+    "noImplicitAny": false,
+    "suppressImplicitAnyIndexErrors":true,
+    "removeComments": true,
+    "baseUrl": "./src/frontend",
+    "paths": {
+        "root/*": ["app/root/*"],
+        "shared/*": ["app/shared/*"],
+        "common/*": ["app/shared/*"]
+    },
+    "types": [
+      "core-js",
+      "hammerjs",
+      "node",
+      "uglify-js",
+      "webpack"
+    ]
+  },
+   "include": [
+        "src/frontend/**/*.ts"
+    ],
+  "exclude": [
+    "node_modules",
+     "**/*.spec.ts"
+  ],
+
+  "awesomeTypescriptLoaderOptions": {
+    "forkChecker": true,
+    "useWebpackText": true,
+    "doTypeCheck": true
+  },
+  "compileOnSave" : false,
+  "buildOnSave"   : false,
+  "atom"          : {
+    "rewriteTsconfig": false
+  }
+
+}
