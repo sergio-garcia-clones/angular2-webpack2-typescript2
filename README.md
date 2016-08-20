@@ -35,6 +35,9 @@ If you're using `Docker`, life is so much easier:
 git clone https://github.com/spock123/angular2-webpack2-typescript2.git
 cd angular2-webpack2-typescript2
 
+# Initialize project
+npm run clean
+
 # Serve and start development!
 npm run docker:serve
 
