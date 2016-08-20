@@ -1,8 +1,14 @@
 # angular2-webpack2-typescript2
 Simple Angular2 starter using Webpack2/Typescript2. 
+
+# Introduction
 The sample application features Angular2-Material demos
 
 You can use this repo locally or with Docker (recommended).
+
+* For MacOS, please use Docker for Mac
+* For Windows, please use Docker for Windows
+* For Linux, just use Docker :)
 
 # Features
 
@@ -78,3 +84,19 @@ npm run docker:serve-dist
 # Local
 npm run serve-dist
 ```
+
+# Omissions
+Vital parts of a real world application setup has been omitted due to various reasons:
+
+* Testing: No testing, as Angular2 testing has still not matured to a point I would dare to use it
+* Deployment/Staging: How we deploy our applications is very individual
+* Code coverage: No testing => no coverage :)
+* Linting: Typescript 2.0 doesn't yet play nice with `tslint`
+* AoT template compilation
+
+
+# Acknowledgements
+This repo has been created with great inspiration from
+
+* <a href="https://github.com/gdi2290" target="_new">Patrick Stableton</a> 
+* <a href="https://github.com/AngularClass/angular2-webpack-starter" target="_new">Angular2-Webpack-Starter</a>
