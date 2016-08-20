@@ -1,6 +1,23 @@
 # angular2-webpack2-typescript2
 Simple Angular2 starter using Webpack2/Typescript2. 
 
+# Table of Contents
+* [Introduction](#introduction)
+* [Features](#features)
+  * [Tech Stack] (#tech-stack)
+  * [Application] (#application)
+  * [Build Optimizations] (#build-optimizations)
+* [Getting Started](#getting-started)
+  * [Dependencies] (#dependencies)
+  * [Global Dependencies] (#global-dependencies)
+* [Commands] (#commands)
+   * [Development] (#development)
+   * [Build] (#build)
+   * [Serve Production Build] (#serve-production-build)
+* [Omissions] (#omissions)
+* [Acknowledgements] (#acknowledgements)
+
+
 # Introduction
 The sample application features Angular2-Material demos
 
@@ -20,7 +37,7 @@ The repo uses the following technologies:
 * Typescript 2.x
 * Angular2 Material alpha 0.7-4
 
-## Application Features
+## Application
 The demo application showcases:
 
 * Angular2 module composition using shared modules. 
@@ -29,7 +46,7 @@ The demo application showcases:
 * Application demos the material components as of current version
 * Uses ServiceWorker or AppCache for static caching
 
-## Build Features
+## Build Optimizations
 The build process performs the following optimizations:
 
 * Bundles application into `app`, `vendor` and `polyfills` bundles
@@ -45,7 +62,7 @@ The build process performs the following optimizations:
 * Ensure you're running the latest versions Node (v.4 or higher)  and NPM (v.3 or higher)
 * If you use Docker, have latest version installed which supports `docker-compose` v2
 
-### Global Dependencies
+## Global Dependencies
 If you want to run locally without Docker, you should install the following global dependencies: typescript2.x, webpack2.x, webpack-devel-server, http-server:
 
 ```bash
