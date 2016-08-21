@@ -1,7 +1,7 @@
 {
   "name": "angular2-webpack",
-  "version": "0.0.4",
-  "description": "Angular2, Webpack2, Material Design, Typescript2, Docker",
+  "version": "0.0.5",
+  "description": "Angular2, Webpack2, Material Design, Typescript2, Docker, Sass",
   "license": "MIT",
   "main": "",
   "engines": {

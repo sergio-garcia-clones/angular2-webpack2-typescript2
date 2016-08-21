@@ -17,6 +17,7 @@ Simple Angular2 starter using Webpack2/Typescript2.
    * [Serve Production Build] (#serve-production-build)
 * [Omissions] (#omissions)
 * [Acknowledgements] (#acknowledgements)
+* [Todo] (#todo)
 
 
 # Introduction
@@ -53,8 +54,9 @@ The repo uses the following technologies:
 * Angular2 RC5
 * Webpack 2.1
 * Typescript 2.x
-* Angular2 Material alpha 0.7-4
+* Angular2 Material alpha 7-4
 * Docker container for workflows
+* SASS for styling
 
 ## Application
 The demo application showcases:
@@ -136,3 +138,9 @@ This repo has been created with great inspiration from
 
 * <a href="https://github.com/gdi2290" target="_new">Patrick Stableton</a> 
 * <a href="https://github.com/AngularClass/angular2-webpack-starter" target="_new">Angular2-Webpack-Starter</a>
+
+# Todo
+I don't want to pollute the repo with lots of unneeded code, but I'd like to add some of the following features:
+
+* Code splitting and lazy loading of an ngModule
+* Ahead-of-Time template compilation
