@@ -122,7 +122,7 @@ npm run serve-dist
 ```
 
 # Omissions
-Vital parts of a real world application setup has been omitted due to various reasons:
+Vital parts of a real world application setup have been omitted due to various reasons:
 
 * Testing: No testing, as Angular2 testing has still not matured to a point I would dare to use it
 * Deployment/Staging: How we deploy our applications is very individual
