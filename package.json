@@ -14,9 +14,9 @@
     "serve"             : "webpack-dev-server --config webpack/webpack.dev.js --inline --progress --profile --watch --content-base src/frontend --host=0.0.0.0",
     "build"             : "rimraf dist/frontend && webpack --config webpack/webpack.prod.js  --progress --profile  --bail",
     "serve-dist"        : "http-server dist/frontend --cors -p 8080 ",
-    "docker:serve-dist" : "docker-compose run frontend npm run serve-dist",
+    "docker:serve-dist" : "docker-compose run --service-ports frontend npm run serve-dist",
     "docker:build"      : "docker-compose run frontend npm run build",
-    "docker:serve"      : "docker-compose run frontend npm run serve"
+    "docker:serve"      : "docker-compose run --service-ports frontend npm run serve"
   },
   "dependencies": {
   },
