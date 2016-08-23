@@ -93,6 +93,17 @@ npm install --progress=false -g typescript@beta webpack-cli webpack-dev-server w
 
 
 # Commands
+
+## Dependencies
+Update dependencies if you add/remove packages in package.json
+```bash
+# Docker
+npm run docker:install
+
+# Local
+npm install
+```
+
 ## Development
 Serve development build with livereload on `localhost:8080`
 ```bash
