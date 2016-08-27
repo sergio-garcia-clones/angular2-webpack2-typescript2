@@ -1,29 +1,3 @@
-<md-sidenav-layout>
 
-    <md-sidenav #sidenav mode="over" class="app-sidenav">
-        <md-list>
-          <a md-list-item *ngFor="let menu of menu"
-             (click)="navigate(menu.link); sidenav.close()">
-            <md-icon md-list-icon>{{menu.icon}}</md-icon>
-            <span md-line>{{menu.name}}</span>
-          </a>
-      </md-list>
-    </md-sidenav>
+<router-outlet></router-outlet>
 
-    <md-toolbar color="primary">
-        <button class="app-icon-button" (click)="sidenav.toggle()">
-            <i class="material-icons app-toolbar-menu">menu</i>
-        </button>
-        Angular2 Material Design Examples
-        <span class="app-toolbar-filler"></span>
-  </md-toolbar>
-
-  <div class="app-content">
-     <router-outlet></router-outlet>
-  </div>
-
-</md-sidenav-layout>
-
-<span class="app-action">
-  <button md-fab><md-icon>check circle</md-icon></button>
-</span>
