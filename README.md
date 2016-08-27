@@ -15,6 +15,7 @@ Simple Angular2 starter using Webpack2/Typescript2.
    * [Development] (#development)
    * [Build] (#build)
    * [Serve Production Build] (#serve-production-build)
+   * [Linting] (#linting)
 * [Omissions] (#omissions)
 * [Acknowledgements] (#acknowledgements)
 * [Todo] (#todo)
@@ -143,7 +144,7 @@ Check your coding styles with with TsLint and Codelyzer:
 npm run docker:tslint
 
 # Local
-npm run tslit
+npm run tslint
 ```
 
 # Omissions
