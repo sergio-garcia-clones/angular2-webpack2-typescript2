@@ -22,6 +22,11 @@ import '@angular2-material/progress-bar';
 import '@angular2-material/progress-circle';
 import '@angular2-material/radio';
 import '@angular2-material/sidenav';
+import '@angular2-material/slider';
+import '@angular2-material/slide-toggle';
+import '@angular2-material/tabs';
+import '@angular2-material/toolbar';
+import '@angular2-material/tooltip';
 
 
 // RxJS
