@@ -2,7 +2,7 @@
 import { NgModule, ModuleWithProviders }      from '@angular/core';
 import { CommonModule }                       from '@angular/common';
 import { FormsModule,
-         ReactiveFormsModule}                 from '@angular/forms';
+         ReactiveFormsModule }                from '@angular/forms';
 import { HttpModule, Http }                   from '@angular/http';
 import { RouterModule }                       from '@angular/router';
 import { MdModule }                           from './md.module';
@@ -10,7 +10,7 @@ import { MdModule }                           from './md.module';
 
 @NgModule({
 
-  imports:[
+  imports: [
     CommonModule,
     HttpModule,
     RouterModule,

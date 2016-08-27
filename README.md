@@ -30,7 +30,7 @@ You can use this repo locally or with `Docker` (recommended).
 * For Linux, just use `Docker` :)
 
 ## Quick Start
-If you're using `Docker`, life is so much easier:
+If you're using `Docker`, life is easier:
 ```bash
 # Clone repo and enter folder
 git clone https://github.com/spock123/angular2-webpack2-typescript2.git
@@ -57,6 +57,7 @@ The repo uses the following technologies:
 * Angular2 Material alpha 7-4
 * Docker container for workflows
 * SASS for styling
+* Code checking with Tslint and Codelyzer
 
 ## Application
 The demo application showcases:
@@ -132,6 +133,17 @@ npm run docker:serve-dist
 
 # Local
 npm run serve-dist
+```
+
+## Linting
+Check your coding styles with with TsLint and Codelyzer:
+
+```bash
+# Docker
+npm run docker:tslint
+
+# Local
+npm run tslit
 ```
 
 # Omissions

@@ -10,7 +10,7 @@ import { ListsComponent }                     from './lists/lists.component';
 import { IconsComponent }                     from './icons/icons.component';
 import { TabsComponent }                      from './tabs/tabs.component';
 import { SlidersComponent }                   from './sliders/sliders.component';
-import { SpinnersComponent}                   from './spinners/spinners.component';
+import { SpinnersComponent }                  from './spinners/spinners.component';
 
 
 

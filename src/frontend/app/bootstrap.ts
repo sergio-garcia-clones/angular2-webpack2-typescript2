@@ -9,12 +9,10 @@ import { AppModule }                    from './app.module';
 if ( ENV === 'production') {
     enableProdMode();
 }
-else {
-}
 
 function  main(): any {
 
-     if( ENV !== 'production') {
+     if ( ENV !== 'production') {
         return platformBrowserDynamic().bootstrapModule(AppModule)
 
         .then( (ref) => {
