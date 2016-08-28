@@ -5,7 +5,7 @@ import { FormsModule,
          ReactiveFormsModule }                from '@angular/forms';
 import { HttpModule, Http }                   from '@angular/http';
 import { RouterModule }                       from '@angular/router';
-//import { MdModule }                           from './md.module';
+import { PrimengModule }                               from './primeng.module';
 
 
 @NgModule({
@@ -15,7 +15,8 @@ import { RouterModule }                       from '@angular/router';
     HttpModule,
     RouterModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    PrimengModule
   ],
 
   declarations: [
@@ -26,7 +27,8 @@ import { RouterModule }                       from '@angular/router';
     HttpModule,
     FormsModule,
     ReactiveFormsModule,
-    CommonModule
+    CommonModule,
+    PrimengModule
   ]
 })
 

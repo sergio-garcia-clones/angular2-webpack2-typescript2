@@ -10,7 +10,7 @@ var CssLoader = function() {
 
 var FontLoader = function() {
     return {
-        test: /\.(woff|woff2)(\?.*$|$)/,
+        test: /\.(woff|svg|ttf|eot|woff2)(\?.*$|$)/,
         loader: 'url-loader?importLoaders=1&limit=10000&name=assets/app/[hash].[ext]'
     };
 };
@@ -30,16 +30,22 @@ var ImageLoader = function() {
         test: /\.(jpeg|jpg|png|gif|svg)(\?.*$|$)/,
          loaders: [
             'file?hash=sha512&digest=hex&name=[hash].[ext]',
-            'image-webpack?{bypassOnDebug:true, progressive: true, optimizationLevel:7,interlaced:false,svgo:{plugins: [{removeViewBox: false},{removeEmptyAttrs: false}]}'
+            'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
         ]
     };
 };
 
 
+/*
+ 'image-webpack?{bypassOnDebug:true, progressive: true, optimizationLevel:7,interlaced:false,svgo:{plugins: [{removeViewBox: false},{removeEmptyAttrs: false}]}'
+      
+*/
+
+
 var JavascriptLoader = function() {
     return {
         test: /\.js$/,
-        loader: 'babel!jshint',
+        loader: 'babel',
         exclude: /node_modules/
     };
 };

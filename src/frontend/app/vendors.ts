@@ -9,6 +9,11 @@ import '@angular/router';
 
 
 
+import {InputTextModule,DataTableModule,ButtonModule,DialogModule} from 'primeng/primeng';
+
+
+
+
 if ( ENV === 'production') {
   // Production
 

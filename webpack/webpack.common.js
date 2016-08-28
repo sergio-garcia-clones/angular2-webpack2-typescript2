@@ -42,6 +42,7 @@ module.exports = {
     exprContextRegExp: /.*\.ts/,
     exprContextCritical: false,
 
+    /*
     preLoaders: [
       {
         test: /\.js$/,
@@ -52,8 +53,10 @@ module.exports = {
       },
        { test: /\.d\.ts$/, loader: 'ignore-loader' },
     ],
+    */
     loaders: [
         loaders.TypescriptLoader(),
+        loaders.ImageLoader(),
         loaders.JsonLoader(),
         loaders.CssLoader(),
         loaders.FontLoader(),

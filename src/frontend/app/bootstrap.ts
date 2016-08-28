@@ -1,5 +1,10 @@
 // Require styling
+import 'primeui/themes/omega/theme.css';
+import '../sass/font-awesome/font-awesome.scss';
+import 'primeui/primeui-ng-all.min.css';
+
 import '../sass/index.scss';
+
 import '@angular2-material/core/overlay/overlay.css';
 
 import { enableProdMode }               from '@angular/core';
