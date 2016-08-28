@@ -5,8 +5,6 @@ import 'primeui/primeui-ng-all.min.css';
 
 import '../sass/index.scss';
 
-import '@angular2-material/core/overlay/overlay.css';
-
 import { enableProdMode }               from '@angular/core';
 import { platformBrowserDynamic }       from '@angular/platform-browser-dynamic';
 import { AppModule }                    from './app.module';
