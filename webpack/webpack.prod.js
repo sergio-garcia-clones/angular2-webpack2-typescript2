@@ -12,6 +12,7 @@ var CompressionPlugin   = require('compression-webpack-plugin');
 var WebpackMd5Hash      = require('webpack-md5-hash');
 var OfflinePlugin       = require('offline-plugin');
 var HtmlWebpackPlugin   = require('html-webpack-plugin');
+const NamedModulesPlugin= require('webpack/lib/NamedModulesPlugin');
 
 
 
@@ -42,16 +43,6 @@ var config = webpackMerge(commonConfig, {
 
   plugins: [
 
-    new webpack.LoaderOptionsPlugin({
-      minimize: true,
-      debug: false
-    }),
-
-    new WebpackMd5Hash(),
-
-    // Prevent inclusion of duplicate code in the bundle
-    new DedupePlugin(),
-
     new DefinePlugin({
       'ENV': JSON.stringify(METADATA.ENV),
       'HMR': METADATA.HMR,
@@ -63,12 +54,29 @@ var config = webpackMerge(commonConfig, {
       }
     }),
 
+    new NamedModulesPlugin(),
+
+
+    new webpack.LoaderOptionsPlugin({
+      minimize: true,
+      debug: false
+    }),
+
+
+    new WebpackMd5Hash(),
+
+    // Prevent inclusion of duplicate code in the bundle
+    // There is a bug in Webpack which breaks the build.. commented out for now
+    // new DedupePlugin(),
+
+
+
     new UglifyJsPlugin({
      exclude: [
          'serviceworker.js',
          'manifest.appcache'
       ],
-      beautify: false, //prod
+      beautify: false,
       mangle: {
         screw_ie8 : true,
         keep_fnames: true
@@ -78,6 +86,7 @@ var config = webpackMerge(commonConfig, {
       },
       comments: false
     }),
+
 
 
     new HtmlWebpackPlugin({
@@ -95,19 +104,18 @@ var config = webpackMerge(commonConfig, {
     }),
 
 
+
     new CompressionPlugin({
       regExp: /\.css$|\.html$|\.js$|\.woff$|\.map$/,
       threshold: 2 * 1024
     }),
 
 
-
-
     new OfflinePlugin({
       caches: 'all',
       publicPath: '/',
       updateStrategy: 'changed',
-      version: 'iticket-' + new Date(),
+      version: 'material-' + new Date(),
       excludes: [
         '**/*.gz',
         '**/*.map'
@@ -137,17 +145,7 @@ var config = webpackMerge(commonConfig, {
    * See: https://github.com/webpack/html-loader#advanced-options
    */
   // TODO: Need to workaround Angular 2's html syntax => #id [bind] (event) *ngFor
-  htmlLoader: {
-    minimize: true,
-    removeAttributeQuotes: false,
-    caseSensitive: true,
-    customAttrSurround: [
-      [/#/, /(?:)/],
-      [/\*/, /(?:)/],
-      [/\[?\(?/, /(?:)/]
-    ],
-    customAttrAssign: [/\)?\]?=/]
-  },
+
 
   node: {
     global: 'window',

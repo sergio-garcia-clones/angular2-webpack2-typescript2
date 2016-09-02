@@ -12,10 +12,10 @@ var commonConfig            = require('./webpack.common.js')
 
 
 // Webpack plugins
-var ForkCheckerPlugin       = require('awesome-typescript-loader').ForkCheckerPlugin;
-var HtmlWebpackPlugin       = require('html-webpack-plugin');
-
-var DefinePlugin            = require('webpack/lib/DefinePlugin');
+const ForkCheckerPlugin       = require('awesome-typescript-loader').ForkCheckerPlugin;
+const HtmlWebpackPlugin       = require('html-webpack-plugin');
+const DefinePlugin            = require('webpack/lib/DefinePlugin');
+const NamedModulesPlugin      = require('webpack/lib/NamedModulesPlugin');
 
 
 // Constants
@@ -54,6 +54,10 @@ var config = webpackMerge(commonConfig, {
                 'HMR': METADATA.HMR,
             }
         }),
+
+        // File name as module name - we want to avoid module.id
+        // https://github.com/webpack/webpack/commit/a04ffb928365b19feb75087c63f13cadfc08e1eb
+        new NamedModulesPlugin(),
 
 
          new HtmlWebpackPlugin({

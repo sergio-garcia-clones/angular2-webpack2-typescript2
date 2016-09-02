@@ -7,13 +7,14 @@ import { ExamplesModule }                       from './examples/examples.module
 
 // App level component
 import { AppComponent }                         from './app.component';
+import { StartComponent }                       from './start.component';
 
 // Top level routing
 import { routing, routingProviders }            from './app.routes';
 
 
 @NgModule({
-    
+
      imports: [
         BrowserModule,
         SharedModule.forRoot(),
@@ -22,7 +23,8 @@ import { routing, routingProviders }            from './app.routes';
     ],
 
     declarations: [
-        AppComponent
+        AppComponent,
+        StartComponent
     ],
 
      providers: [

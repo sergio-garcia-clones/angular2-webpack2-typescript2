@@ -6,8 +6,9 @@ var helpers   = require('./helpers');
 var loaders   = require('./webpack-loaders');
 
 // Webpack Plugins
-var CopyWebpackPlugin   = require('copy-webpack-plugin');
-var ForkCheckerPlugin   = require('awesome-typescript-loader').ForkCheckerPlugin;
+const CopyWebpackPlugin   = require('copy-webpack-plugin');
+const ForkCheckerPlugin   = require('awesome-typescript-loader').ForkCheckerPlugin;
+
 
 // Constants
 var METADATA = {
@@ -47,9 +48,14 @@ module.exports = {
         test: /\.js$/,
         loader: 'source-map-loader',
         exclude: [
-          helpers.root('node_modules/rxjs')
+          helpers.root('node_modules/rxjs'),
+          helpers.root('node_modules/@angular')
         ]
       },
+
+
+
+
        { test: /\.d\.ts$/, loader: 'ignore-loader' },
     ],
     loaders: [
@@ -69,10 +75,14 @@ module.exports = {
     //  Do type checking in a separate process, so webpack don't need to wait.
     new ForkCheckerPlugin(),
 
+
+
     // Shares common code between the pages.
+
     new webpack.optimize.CommonsChunkPlugin({
       name: helpers.reverse(['polyfills', 'vendor'])
     }),
+
 
     new CopyWebpackPlugin([
         { from: 'src/frontend/assets', to: 'assets' },

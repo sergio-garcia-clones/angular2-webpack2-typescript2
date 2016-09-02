@@ -2,13 +2,17 @@
     <md-card-title>Inputs</md-card-title>
     <md-card-content>
 
-        <md-input placeholder="Name"></md-input>
+        <p>
+            <md-input placeholder="Name"></md-input>
+        </p>
 
-        <md-input #nickname placeholder="Name" maxlength="100">
-            <md-hint align="end">
-            {{nickname.characterCount}} / 100
-            </md-hint>
-        </md-input>
+        <p>
+            <md-input #nickname placeholder="Name" maxlength="100">
+                <md-hint align="bottom">
+                {{nickname.characterCount}} / 100
+                </md-hint>
+            </md-input>
+        </p>
 
     </md-card-content>
 </md-card>
@@ -27,8 +31,8 @@
  <md-card>
     <md-card-title>Radio Buttons</md-card-title>
     <md-card-content>
-        <md-radio-button name="symbol">Alpha</md-radio-button>
-        <md-radio-button name="symbol">Beta</md-radio-button>
-        <md-radio-button name="symbol" disabled>Gamma</md-radio-button>
+        <md-radio-button name="symbol">Hello</md-radio-button>
+        <md-radio-button name="symbol">World</md-radio-button>
+        <md-radio-button name="symbol" disabled>Disabled</md-radio-button>
      </md-card-content>
 </md-card>

@@ -11,6 +11,7 @@ import { IconsComponent }                     from './icons/icons.component';
 import { TabsComponent }                      from './tabs/tabs.component';
 import { SlidersComponent }                   from './sliders/sliders.component';
 import { SpinnersComponent }                  from './spinners/spinners.component';
+import { GridComponent }                      from './grid/grid.component';
 
 
 
@@ -22,7 +23,8 @@ const routes: Routes  = [
      { path: 'lists',       component: ListsComponent },
      { path: 'tabs',        component: TabsComponent },
      { path: 'sliders',     component: SlidersComponent},
-     { path: 'spinners',    component: SpinnersComponent}
+     { path: 'spinners',    component: SpinnersComponent},
+     { path: 'grid',        component: GridComponent }
 ];
 
 
@@ -36,6 +38,7 @@ const routes: Routes  = [
   declarations: [
     ButtonsComponent,
     FormsComponent,
+    GridComponent,
     IconsComponent,
     ListsComponent,
     TabsComponent,

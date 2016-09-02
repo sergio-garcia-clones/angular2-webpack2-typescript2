@@ -16,7 +16,7 @@ import { MdModule }                           from './md.module';
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-    MdModule
+    MdModule.forRoot()
   ],
 
   declarations: [
@@ -36,9 +36,8 @@ export class SharedModule {
 
   static forRoot(): ModuleWithProviders {
     return {
-      ngModule: SharedModule,
-      providers: [
-      ]
+      ngModule: SharedModule
+
     };
   }
 }

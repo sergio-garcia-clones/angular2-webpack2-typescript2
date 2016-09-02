@@ -1,5 +1,5 @@
 # angular2-webpack2-typescript2
-Simple Angular2 starter using Webpack2/Typescript2. 
+Simple Angular2 starter using Webpack2/Typescript2.
 
 # Table of Contents
 * [Introduction](#introduction)
@@ -63,7 +63,7 @@ The repo uses the following technologies:
 ## Application
 The demo application showcases:
 
-* Angular2 module composition using shared modules. 
+* Angular2 module composition using shared modules.
 * Angular2 module routing
 * Angular2-Material components gathered in one shared module
 * Application demos the material components as of current version
@@ -81,7 +81,7 @@ The build process performs the following optimizations:
 # Getting Started
 ## Dependencies
 
-* `node` and `npm` 
+* `node` and `npm`
 * Ensure you're running the latest versions Node (v.4 or higher)  and NPM (v.3 or higher)
 * If you use `Docker`, have latest version installed which supports `docker-compose` v2
 
@@ -133,7 +133,7 @@ Serve the production built application on `localhost:8080`
 npm run docker:serve-dist
 
 # Local
-npm run serve-dist
+npm run serve:dist
 ```
 
 ## Linting
@@ -160,7 +160,7 @@ Vital parts of a real world application setup have been omitted due to various r
 # Acknowledgements
 This repo has been created with great inspiration from
 
-* <a href="https://github.com/gdi2290" target="_new">Patrick Stableton</a> 
+* <a href="https://github.com/gdi2290" target="_new">Patrick Stableton</a>
 * <a href="https://github.com/AngularClass/angular2-webpack-starter" target="_new">Angular2-Webpack-Starter</a>
 
 # Todo

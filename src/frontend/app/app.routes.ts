@@ -1,7 +1,9 @@
 import { Routes, RouterModule }   from '@angular/router';
 
+import { StartComponent } from './start.component';
+
 const routes: Routes = [
-     { path: '', redirectTo: '/buttons', pathMatch: 'full'}
+     { path: '', component: StartComponent }
 ];
 
 export const routing = RouterModule.forRoot(routes);
