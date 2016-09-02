@@ -52,10 +52,10 @@ npm run docker:serve
 ## Tech Stack
 The repo uses the following technologies:
 
-* Angular2 RC5
+* Angular2 RC6
 * Webpack 2.1
 * Typescript 2.x
-* Angular2 Material alpha 7-4
+* Angular2 Material alpha 7-12
 * Docker container for workflows
 * SASS for styling
 * Code checking with Tslint and Codelyzer
@@ -153,7 +153,6 @@ Vital parts of a real world application setup have been omitted due to various r
 * Testing: No testing, as Angular2 testing has still not matured to a point I would dare to use it
 * Deployment/Staging: How we deploy our applications is very individual
 * Code coverage: No testing => no coverage :)
-* Linting: Typescript 2.0 doesn't yet play nice with `tslint`
 * AoT template compilation
 
 
