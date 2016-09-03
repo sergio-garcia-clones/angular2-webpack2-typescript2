@@ -21,3 +21,4 @@ build/**
 /**/*.zip
 .idea/
 *.swp
+/**/*.ngfactory.ts
