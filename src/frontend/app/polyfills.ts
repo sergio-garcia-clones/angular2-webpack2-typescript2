@@ -1,8 +1,6 @@
 // Polyfills
 
 // import 'ie-shim'; // Internet Explorer
-
-
 import 'core-js/es6/symbol';
 import 'core-js/es6/object';
 import 'core-js/es6/function';

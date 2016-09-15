@@ -16,7 +16,7 @@ import { MdModule }                           from './md.module';
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-    MdModule.forRoot()
+   MdModule.forRoot()
   ],
 
   declarations: [
