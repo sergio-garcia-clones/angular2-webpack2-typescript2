@@ -7,7 +7,7 @@ var loaders   = require('./webpack-loaders');
 
 // Webpack Plugins
 const CopyWebpackPlugin   = require('copy-webpack-plugin');
-const ForkCheckerPlugin   = require('awesome-typescript-loader').ForkCheckerPlugin;
+//const ForkCheckerPlugin   = require('awesome-typescript-loader').ForkCheckerPlugin;
 
 
 // Constants
@@ -35,25 +35,39 @@ module.exports = {
     }
   },
 
+
+
+/*
+  resolve: {
+    modules: [
+      helpers.root('src/frontend/app'),
+      'node_modules'
+    ],
+    extensions        : ['', '.ts', '.js'],
+    enforceExtension  : false,
+    alias             : {
+        'common'  : 'shared',
+        'shared'  : 'shared',
+        'root'    : 'root'
+    }
+  },
+  */
+
   module: {
-    //exprContextRequest: helpers.root('src/frontend/app'),
-    //exprContextRegExp: /.*\.ts/,
+    exprContextRequest: helpers.root('src/frontend/app'),
+    exprContextRegExp: /.*\.ts/,
     exprContextCritical: false,
 
-     preLoaders: [
-        {
-          test: /\.ts$/,
-          loader: 'string-replace-loader',
-          query: {
-            search: '(System|SystemJS)(.*[\\n\\r]\\s*\\.|\\.)import\\((.+)\\)',
-            replace: '$1.import($3).then(mod => (mod.__esModule && mod.default) ? mod.default : mod)',
-            flags: 'g'
-          },
-          include: [helpers.root('src')]
-        },
-
-      ],
-
+    preLoaders: [
+      {
+        test: /\.js$/,
+        loader: 'source-map-loader',
+        exclude: [
+          helpers.root('node_modules/rxjs')
+        ]
+      },
+       { test: /\.d\.ts$/, loader: 'ignore-loader' },
+    ],
     loaders: [
         loaders.TypescriptLoader(),
         loaders.JsonLoader(),
@@ -68,15 +82,15 @@ module.exports = {
 
   plugins: [
 
-     new webpack.ContextReplacementPlugin(/angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/, __dirname),
-
     //  Do type checking in a separate process, so webpack don't need to wait.
-    new ForkCheckerPlugin(),
+    //new ForkCheckerPlugin(),
 
     // Shares common code between the pages.
+
     new webpack.optimize.CommonsChunkPlugin({
-        name: ['polyfills', 'vendor'].reverse()
+      name: helpers.reverse(['polyfills', 'vendor'])
     }),
+
 
     new CopyWebpackPlugin([
         { from: 'src/frontend/assets', to: 'assets' },
@@ -86,13 +100,12 @@ module.exports = {
 
   ],
 
-   node: {
-      global: 'window',
-      crypto: 'empty',
-      process: true,
-      module: false,
-      clearImmediate: false,
-      setImmediate: false
-    }
+  node: {
+    global  : 'window',
+    crypto  : 'empty',
+    module  : false,
+    clearImmediate  : false,
+    setImmediate    : false
+  }
 
 };

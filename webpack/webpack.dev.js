@@ -59,11 +59,10 @@ var config = webpackMerge(commonConfig, {
         // https://github.com/webpack/webpack/commit/a04ffb928365b19feb75087c63f13cadfc08e1eb
         new NamedModulesPlugin(),
 
-
-         new HtmlWebpackPlugin({
-            template        : 'src/frontend/index.ejs',
-            chunksSortMode  : helpers.packageSort(['polyfills', 'vendor', 'app']),
-            filename        : 'index.html'
+        new HtmlWebpackPlugin({
+            template: 'src/frontend/index.ejs',
+            chunksSortMode: 'dependency',
+            filename: 'index.html'
         })
 
     ],
@@ -90,16 +89,15 @@ var config = webpackMerge(commonConfig, {
     },
 
      node: {
-      global: true,
-      process: true,
-      Buffer: false,
+      global: 'window',
       crypto: 'empty',
+      process: true,
       module: false,
       clearImmediate: false,
-      setImmediate: false,
-      clearTimeout: true,
-      setTimeout: true
+      setImmediate: false
     }
 
 });
 module.exports = config;
+
+console.log(config);

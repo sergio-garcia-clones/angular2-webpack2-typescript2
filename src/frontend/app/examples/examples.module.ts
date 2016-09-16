@@ -1,7 +1,7 @@
 // Angular2 Material Design Module
 import { NgModule, ModuleWithProviders }      from '@angular/core';
 import { Routes, RouterModule }               from '@angular/router';
-import { SharedModule }                       from 'shared/shared.module';
+import { SharedModule }                       from '../shared/shared.module';
 
 // Components and pipes
 import { ButtonsComponent }                   from './buttons/buttons.component';

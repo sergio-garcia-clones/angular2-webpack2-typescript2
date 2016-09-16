@@ -1,26 +1,28 @@
 {
   "compilerOptions": {
-    "target"  : "es5",
-    "module"  : "commonjs",
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
     "sourceMap": true,
-    "strictNullChecks": false,
-    "pretty"  : true,
     "noEmitHelpers": true,
-    "noImplicitAny": false,
-    "suppressImplicitAnyIndexErrors":true,
-    "removeComments": true,
+    "strictNullChecks": false,
     "baseUrl": "./src/frontend",
     "paths": {
         "root/*": ["app/root/*"],
         "shared/*": ["app/shared/*"],
         "common/*": ["app/shared/*"]
     },
+     "lib": [
+      "dom",
+      "es6"
+    ],
     "types": [
-      "core-js",
       "hammerjs",
       "node",
+      "source-map",
       "uglify-js",
       "webpack"
     ]
@@ -34,19 +36,13 @@
   ],
 
   "awesomeTypescriptLoaderOptions": {
-    "forkChecker": true,
-    "useWebpackText": true,
-    "doTypeCheck": true
+   "forkChecker": true,
+    "useWebpackText": true
   },
   "compileOnSave" : false,
   "buildOnSave"   : false,
   "atom"          : {
     "rewriteTsconfig": false
-  },
-
-  "angularCompilerOptions": {
-   "genDir": ".",
-   "debug": true
- }
+  }
 
 }
