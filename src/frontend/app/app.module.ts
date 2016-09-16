@@ -3,7 +3,7 @@ import { BrowserModule  }                       from '@angular/platform-browser'
 
 // Application modules
 import { SharedModule }                         from './shared/shared.module';
-// import { ExamplesModule }                       from './examples/examples.module';
+import { ExamplesModule }                       from './examples/examples.module';
 
 // App level component
 import { AppComponent }                         from './app.component';
@@ -18,7 +18,7 @@ import { routing, routingProviders }            from './app.routes';
      imports: [
         BrowserModule,
         SharedModule.forRoot(),
-       // ExamplesModule.forRoot(),
+        ExamplesModule.forRoot(),
         routing
     ],
 
