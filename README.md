@@ -1,5 +1,5 @@
 # angular2-webpack2-typescript2
-Simple Angular2 starter using Webpack2/Typescript2.
+Simple Angular2 starter using Webpack2/Typescript2/Material2
 
 # Table of Contents
 * [Introduction](#introduction)
@@ -52,10 +52,10 @@ npm run docker:serve
 ## Tech Stack
 The repo uses the following technologies:
 
-* Angular2 RC6
+* Angular 2.0.0
 * Webpack 2.1
-* Typescript 2.x
-* Angular2 Material alpha 7-12
+* Typescript 2
+* Angular2 Material alpha 8-1
 * Docker container for workflows
 * SASS for styling
 * Code checking with Tslint and Codelyzer
