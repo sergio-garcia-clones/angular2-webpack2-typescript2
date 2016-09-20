@@ -2,7 +2,7 @@ import { Component }        from '@angular/core';
 
 @Component({
     selector: 'icons',
-    template: require('./icons.html')
+     templateUrl: 'app/examples/icons/icons.html'
 })
 
 export class IconsComponent {

@@ -2,7 +2,7 @@ import { Component }        from '@angular/core';
 
 @Component({
     selector: 'lists',
-    template: require('./sliders.html')
+    templateUrl: 'app/examples/sliders/sliders.html'
 })
 
 export class SlidersComponent {

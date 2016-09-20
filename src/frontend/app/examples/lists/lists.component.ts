@@ -2,7 +2,7 @@ import { Component }        from '@angular/core';
 
 @Component({
     selector: 'lists',
-    template: require('./lists.html')
+    templateUrl: 'app/examples/lists/lists.html'
 })
 
 export class ListsComponent {

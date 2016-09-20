@@ -27,7 +27,7 @@
   "devDependencies": {
     "@angular/common": "2.0.0",
     "@angular/compiler": "2.0.0",
-    "@angular/compiler-cli": "0.6.1",
+    "@angular/compiler-cli": "0.6.2",
     "@angular/core": "2.0.0",
     "@angular/forms": "2.0.0",
     "@angular/http": "2.0.0",
@@ -60,6 +60,7 @@
     "@types/source-map": "0.1.26",
     "@types/uglify-js": "2.0.27",
     "@types/webpack": "^1.12.34",
+    "angular2-template": "0.0.1",
     "awesome-typescript-loader": "2.2.4",
     "codelyzer": "0.0.28",
     "compression-webpack-plugin": "0.3.1",

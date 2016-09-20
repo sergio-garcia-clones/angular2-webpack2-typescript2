@@ -2,7 +2,7 @@ import { Component }    from '@angular/core';
 
 @Component({
     selector: 'forms',
-    template: require('./forms.html')
+    templateUrl: 'app/examples/forms/forms.html'
 })
 
 export class FormsComponent {
