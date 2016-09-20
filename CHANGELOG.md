@@ -1,0 +1,20 @@
+# Changelog
+
+2016.09.20<br>
+V0.0.8<br>
+* Added AoT compilation.
+* Bumped Angular-Material to Alpha 8-2
+
+
+Be aware of small bugs in Ng-Material.
+If you get errors in the Material module, check out this issue I made in the Material Github repo (and it's resolution).
+I expect this issue to be fixed in the next Material build.
+
+https://github.com/angular/material2/issues/1279
+
+About AoT compilation:
+The "npm run build" command first compiles the application into the "compiled/" folder.<br>
+Webpack production configuration uses this build instead of your source-code. <bR>
+This way Webpack will use the compiled application.<br>
+You can start a compilation manually by issuing "npm run aot" 
+
