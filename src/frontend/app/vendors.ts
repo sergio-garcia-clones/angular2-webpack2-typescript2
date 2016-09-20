@@ -31,6 +31,10 @@ import '@angular2-material/toolbar';
 import '@angular2-material/tooltip';
 
 
+import '../sass/index.scss';
+import '@angular2-material/core/overlay/overlay.css';
+
+
 // Hammer.js - needed by some of the Material modules
 import 'hammerjs/hammer.js';
 

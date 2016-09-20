@@ -30,6 +30,10 @@ var METADATA = webpackMerge(commonConfig.metadata, {
 
 
 var config = webpackMerge(commonConfig, {
+    
+  entry     : {
+    'app': './src/frontend/app/bootstrap.aot.ts'
+  },
 
   metadata: METADATA,
   debug: false,

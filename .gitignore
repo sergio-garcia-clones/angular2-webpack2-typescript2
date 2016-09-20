@@ -19,11 +19,11 @@ aot/**
 /src/*/__build__/
 __build__/**
 build/**
+compiled
+compiled/**
 /**/*.gz
 /**/*.zip
 .idea/
 *.swp
 /**/*.ngfactory.ts
-src/frontend/app/**/*.js
-src/frontend/app/**/*.ngfactory.ts
-src/**/*.map
+/**/*.map
