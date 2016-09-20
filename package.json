@@ -1,6 +1,6 @@
 {
   "name": "angular2-webpack",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Angular2, Webpack2, Material Design, Typescript2, Docker, Sass, Codelyzer",
   "license": "MIT",
   "main": "",
