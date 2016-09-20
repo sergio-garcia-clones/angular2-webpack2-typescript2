@@ -2,7 +2,7 @@ import { Component }        from '@angular/core';
 
 @Component({
     selector: 'buttons',
-    templateUrl: 'app/examples/buttons/buttons.html'
+    templateUrl: './buttons.html'
 })
 
 export class ButtonsComponent {

@@ -21,7 +21,7 @@
     "docker:serve": "docker-compose run --service-ports frontend npm run serve",
     "docker:tslint": "docker-compose run --service-ports frontend npm run tslint",
     "docker:bash": "docker-compose run --service-ports frontend bash",
-    "ngc": "./node_modules/.bin/ngc"
+    "aot": "./node_modules/.bin/ngc -p tsconfig.aot.json"
   },
   "dependencies": {},
   "devDependencies": {

@@ -13,6 +13,8 @@ Thumbs.db
 node_modules
 typings
 dist/**
+aot
+aot/**
 /public/__build__/
 /src/*/__build__/
 __build__/**
@@ -22,3 +24,6 @@ build/**
 .idea/
 *.swp
 /**/*.ngfactory.ts
+src/frontend/app/**/*.js
+src/frontend/app/**/*.ngfactory.ts
+src/**/*.map

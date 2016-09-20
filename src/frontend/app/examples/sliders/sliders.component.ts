@@ -2,7 +2,7 @@ import { Component }        from '@angular/core';
 
 @Component({
     selector: 'lists',
-    templateUrl: 'app/examples/sliders/sliders.html'
+    templateUrl: './sliders.html'
 })
 
 export class SlidersComponent {

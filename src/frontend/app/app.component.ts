@@ -3,7 +3,7 @@ import { Router }                       from '@angular/router';
 
 @Component({
     selector: 'app',
-    template: require('./app.html')
+    templateUrl:'app.html'
 })
 
 export class AppComponent  {

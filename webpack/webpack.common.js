@@ -21,7 +21,7 @@ module.exports = {
   entry     : {
     'polyfills': './src/frontend/app/polyfills.ts',
     'vendor': './src/frontend/app/vendors.ts',
-    'app': './src/frontend/app/bootstrap.ts'
+    'app': './src/frontend/app/bootstrap.aot.ts'
   },
 
   resolve: {
