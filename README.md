@@ -132,10 +132,9 @@ npm run tslint
 # Omissions
 Vital parts of a real world application setup have been omitted due to various reasons:
 
-* Testing: No testing, as Angular2 testing has still not matured to a point I would dare to use it
-* Deployment/Staging: How we deploy our applications is very individual
-* Code coverage: No testing => no coverage :)
-* AoT template compilation
+* Testing
+* Deployment/Staging
+
 
 
 # Acknowledgements
