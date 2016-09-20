@@ -73,13 +73,12 @@ The demo application showcases:
 * Application demos the material components as of current version
 * Uses ServiceWorker or AppCache for static caching
 * AoT template compilation
-* Webpack2 tree shaking
 
 ## Build Optimizations
 The build process performs the following optimizations:
 
 * Performs Ahead-of-Time Angular2 template compilation
-* Webpack does tree shaking with ES2016 modudules
+* Webpack does tree shaking with ES2016 modules
 * Bundles application into `app`, `vendor` and `polyfills` bundles
 * Minifys/Uglify bundles
 * Creates gzipped versions of bundles/asset files
