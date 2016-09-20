@@ -10,7 +10,6 @@ Simple Angular2 starter using Webpack2/Typescript2/Material2
   * [Build Optimizations] (#build-optimizations)
 * [Getting Started](#getting-started)
   * [Dependencies] (#dependencies)
-  * [Global Dependencies] (#global-dependencies)
 * [Commands] (#commands)
    * [Development] (#development)
    * [Build] (#build)
@@ -24,14 +23,13 @@ Simple Angular2 starter using Webpack2/Typescript2/Material2
 # Introduction
 The sample application features Angular2-Material demos
 
-You can use this repo locally or with `Docker` (recommended).
+A Docker-file is used so you can run the commands inside the container if you wish to.
 
 * For MacOS, please use `Docker for Mac`
 * For Windows, please use `Docker for Windows`
 * For Linux, just use `Docker` :)
 
 ## Quick Start
-If you're using `Docker`, life is easier:
 ```bash
 # Clone repo and enter folder
 git clone https://github.com/spock123/angular2-webpack2-typescript2.git
@@ -40,8 +38,14 @@ cd angular2-webpack2-typescript2
 # Initialize project
 npm run clean
 
-# Serve and start development!
-npm run docker:serve
+# Install dependencies
+npm install
+
+# [OPTIONAL] Start docker container so you can run commands from inside, if you wish
+npm run docker:bash
+
+# Start development
+npm run serve
 
 # Open localhost:8080 and enjoy the show
 ```
@@ -53,9 +57,9 @@ npm run docker:serve
 The repo uses the following technologies:
 
 * Angular 2.0.0
-* Webpack 2.1
+* Webpack 2
 * Typescript 2
-* Angular2 Material alpha 8-1
+* Angular2 Material alpha 8-2
 * Docker container for workflows
 * SASS for styling
 * Code checking with Tslint and Codelyzer
@@ -68,10 +72,14 @@ The demo application showcases:
 * Angular2-Material components gathered in one shared module
 * Application demos the material components as of current version
 * Uses ServiceWorker or AppCache for static caching
+* AoT template compilation
+* Webpack2 tree shaking
 
 ## Build Optimizations
 The build process performs the following optimizations:
 
+* Performs Ahead-of-Time Angular2 template compilation
+* Webpack does tree shaking with ES2016 modudules
 * Bundles application into `app`, `vendor` and `polyfills` bundles
 * Minifys/Uglify bundles
 * Creates gzipped versions of bundles/asset files
@@ -85,13 +93,6 @@ The build process performs the following optimizations:
 * Ensure you're running the latest versions Node (v.4 or higher)  and NPM (v.3 or higher)
 * If you use `Docker`, have latest version installed which supports `docker-compose` v2
 
-## Global Dependencies
-If you want to run locally without `Docker`, you should install the following global dependencies: typescript2.x, webpack2.x, webpack-devel-server, http-server:
-
-```bash
-# Install global dependencies (not needed if you use Docker)
-npm install --progress=false -g typescript@beta webpack-cli webpack-dev-server webpack@2.1.0-beta http-server
-```
 
 
 # Commands
@@ -99,40 +100,26 @@ npm install --progress=false -g typescript@beta webpack-cli webpack-dev-server w
 ## Dependencies
 Update dependencies if you add/remove packages in package.json
 ```bash
-# Docker
-npm run docker:install
-
-# Local
 npm install
 ```
 
 ## Development
 Serve development build with livereload on `localhost:8080`
 ```bash
-# Docker
-npm run docker:serve
-
-# Local
 npm run serve
 ```
 
 ## Build
 Create production build in `dist/frontend`
 ```bash
-# Docker
-npm run docker:build
-
-# Local
+# Do AoT compilation, then do a Webpack build
 npm run build
+
 ```
 
 ## Serve production build
 Serve the production built application on `localhost:8080`
 ```bash
-# Docker
-npm run docker:serve-dist
-
-# Local
 npm run serve:dist
 ```
 
@@ -140,10 +127,6 @@ npm run serve:dist
 Check your coding styles with with TsLint and Codelyzer:
 
 ```bash
-# Docker
-npm run docker:tslint
-
-# Local
 npm run tslint
 ```
 
@@ -166,4 +149,3 @@ This repo has been created with great inspiration from
 I don't want to pollute the repo with lots of unneeded code, but I'd like to add some of the following features:
 
 * Code splitting and lazy loading of an ngModule
-* Ahead-of-Time template compilation
