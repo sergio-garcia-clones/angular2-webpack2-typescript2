@@ -5,7 +5,7 @@ import { FormsModule,
          ReactiveFormsModule }                from '@angular/forms';
 import { HttpModule, Http }                   from '@angular/http';
 import { RouterModule }                       from '@angular/router';
-import { MdModule }                           from './md.module';
+import { MaterialModule }                     from '@angular/material';
 
 
 @NgModule({
@@ -16,7 +16,7 @@ import { MdModule }                           from './md.module';
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-   MdModule.forRoot()
+    MaterialModule.forRoot()
   ],
 
   declarations: [
@@ -28,7 +28,7 @@ import { MdModule }                           from './md.module';
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
-    MdModule
+    MaterialModule
   ]
 })
 
