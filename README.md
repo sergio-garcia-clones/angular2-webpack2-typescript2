@@ -56,10 +56,10 @@ npm run serve
 ## Tech Stack
 The repo uses the following technologies:
 
-* Angular 2.0.0
+* Angular 2.0.1
 * Webpack 2
 * Typescript 2
-* Angular2 Material alpha 8-2
+* Angular2 Material alpha 9-2
 * Docker container for workflows
 * SASS for styling
 * Code checking with Tslint and Codelyzer

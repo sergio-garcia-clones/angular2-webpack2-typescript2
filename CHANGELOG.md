@@ -1,5 +1,11 @@
 # Changelog
 
+2016.09.30<br>
+V0.0.9<br>
+* Upgraded to Angular/Material 9-3
+* Upgraded to Angular 2.0.1 
+
+
 2016.09.20<br>
 V0.0.8<br>
 * Added AoT compilation.
