@@ -111,8 +111,12 @@ npm run serve
 ## Build
 Create production build in `dist/frontend`
 ```bash
-# Do AoT compilation, then do a Webpack build
+# Production build without AoT compilation
 npm run build
+
+# Production build with AoT compilation
+# Note: does not work at the moment due to bugs in Ng2Redux
+npm run build-aot
 
 ```
 

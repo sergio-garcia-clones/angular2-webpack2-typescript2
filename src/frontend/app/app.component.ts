@@ -1,12 +1,6 @@
 import { Component, OnInit }                    from '@angular/core';
 import { Router }                       from '@angular/router';
-
-// Redux imports
 import { NgReduxRouter }                from 'ng2-redux-router';
-import { NgRedux, DevToolsExtension, select }   from 'ng2-redux';
-import { IAppState, rootReducer,
-         enhancers, middleware,
-         enableBatching }               from './store';
 
 
 @Component({
@@ -29,21 +23,11 @@ export class AppComponent implements OnInit  {
 
     constructor(
         private router: Router,
-        private ngRedux: NgRedux<IAppState>,
-        private ngReduxRouter: NgReduxRouter,
-        private devTool: DevToolsExtension) {}
-
+        private ngReduxRouter: NgReduxRouter
+       ) {}
 
     public ngOnInit() {
-
-        // Configure store
-        this.ngRedux.configureStore(
-           enableBatching(rootReducer),
-           {},
-           middleware,
-           [ ...enhancers, this.devTool.isEnabled() && ENV !=='production' ? this.devTool.enhancer() : f => f]
-        );
-        this.ngReduxRouter.initialize();
+       this.ngReduxRouter.initialize();
     }
 
     public navigate( link: string) {

@@ -13,8 +13,6 @@ Thumbs.db
 node_modules
 typings
 dist/**
-aot
-aot/**
 /public/__build__/
 /src/*/__build__/
 __build__/**

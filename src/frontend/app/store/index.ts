@@ -8,6 +8,7 @@ import { batchActions, enableBatching } from './redux-batched-actions';
 let middleware = [
 ];
 
+/*
 if( ENV !== 'production') {
     middleware.push(
 
@@ -17,6 +18,7 @@ if( ENV !== 'production') {
         })
     );
 }
+*/
 
 
 const enhancers = [
