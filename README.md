@@ -60,7 +60,7 @@ The repo uses the following technologies:
 * Webpack 2
 * Typescript 2
 * Angular2 Material alpha 9-3
-* Docker container for workflows
+* Redux store with Ng2-Redux
 * SASS for styling
 * Code checking with Tslint and Codelyzer
 

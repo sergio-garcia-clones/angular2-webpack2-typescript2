@@ -2,7 +2,7 @@
 2016.10.19
 V0.0.10<br>
 * Upgraded to Angular 2.0.2
-*
+* Added Ng2-Redux
 
 2016.09.30<br>
 V0.0.9<br>
