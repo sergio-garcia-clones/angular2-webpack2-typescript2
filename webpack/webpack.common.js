@@ -31,7 +31,9 @@ module.exports = {
       alias             : {
         'common'  : 'shared',
         'shared'  : 'shared',
+        'store'   :  'store',
         'root'    : 'root'
+
     }
   },
 

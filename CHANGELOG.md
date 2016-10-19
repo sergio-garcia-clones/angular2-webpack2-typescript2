@@ -1,9 +1,13 @@
 # Changelog
+2016.10.19
+V0.0.10<br>
+* Upgraded to Angular 2.0.2
+*
 
 2016.09.30<br>
 V0.0.9<br>
 * Upgraded to Angular/Material 9-3
-* Upgraded to Angular 2.0.1 
+* Upgraded to Angular 2.0.1
 
 
 2016.09.20<br>
@@ -22,5 +26,5 @@ About AoT compilation:
 The "npm run build" command first compiles the application into the "compiled/" folder.<br>
 Webpack production configuration uses this build instead of your source-code. <bR>
 This way Webpack will use the compiled application.<br>
-You can start a compilation manually by issuing "npm run aot" 
+You can start a compilation manually by issuing "npm run aot"
 

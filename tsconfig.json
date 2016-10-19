@@ -13,7 +13,9 @@
     "paths": {
         "root/*": ["app/root/*"],
         "shared/*": ["app/shared/*"],
-        "common/*": ["app/shared/*"]
+        "common/*": ["app/shared/*"],
+        "store/*": ["app/store/*"],
+        "store": ["app/store"]
     },
      "lib": [
       "dom",
