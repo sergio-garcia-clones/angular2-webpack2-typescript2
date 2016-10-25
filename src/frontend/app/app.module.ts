@@ -17,6 +17,7 @@ import { routing, routingProviders }            from './app.routes';
 
 import { NgReduxModule, NgRedux,
          DevToolsExtension }                    from 'ng2-redux';
+import { _NgRedux }                             from './store/_ng-redux';
 import { NgReduxRouter }                        from 'ng2-redux-router';
 import { ACTION_PROVIDERS }                     from './actions';
 import { IAppState, rootReducer,
@@ -25,6 +26,7 @@ import { IAppState, rootReducer,
 
 
 let providers = [
+{ provide: NgRedux, useClass: _NgRedux },
  routingProviders,
  NgReduxRouter,
  DevToolsExtension,
