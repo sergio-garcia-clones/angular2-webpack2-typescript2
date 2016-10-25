@@ -1,4 +1,4 @@
-import { NgRedux }      from 'ng2-redux';
+import { NgRedux, select }      from 'ng2-redux';
 import { IAppState }    from './types';
 import { rootReducer }  from './reducers';
 
@@ -25,6 +25,7 @@ const enhancers = [
 ];
 
 export {
+    select,
     middleware,
     rootReducer,
     enhancers,

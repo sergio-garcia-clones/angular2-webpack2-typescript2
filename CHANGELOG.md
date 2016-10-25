@@ -1,4 +1,10 @@
 # Changelog
+
+2016.10.25
+V0.0.11<br>
+* Upgrade to Angular 2.1
+* Added Ng2-Redux
+
 2016.10.19
 V0.0.10<br>
 * Upgraded to Angular 2.0.2
