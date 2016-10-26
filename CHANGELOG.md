@@ -3,7 +3,7 @@
 2016.10.25
 V0.0.11<br>
 * Upgrade to Angular 2.1
-* Added Ng2-Redux
+* Added AoT compiling (npm run aot or npm run build-aot)
 
 2016.10.19
 V0.0.10<br>

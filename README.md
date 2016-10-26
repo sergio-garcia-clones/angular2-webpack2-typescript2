@@ -56,10 +56,10 @@ npm run serve
 ## Tech Stack
 The repo uses the following technologies:
 
-* Angular 2.0.1
-* Webpack 2
-* Typescript 2
-* Angular2 Material alpha 9-3
+* Angular 2
+* Webpack
+* Typescript
+* Angular2 Material
 * Redux store with Ng2-Redux
 * SASS for styling
 * Code checking with Tslint and Codelyzer
@@ -115,7 +115,6 @@ Create production build in `dist/frontend`
 npm run build
 
 # Production build with AoT compilation
-# Note: does not work at the moment due to bugs in Ng2Redux
 npm run build-aot
 
 ```
@@ -146,6 +145,7 @@ This repo has been created with great inspiration from
 
 * <a href="https://github.com/gdi2290" target="_new">Patrick Stableton</a>
 * <a href="https://github.com/AngularClass/angular2-webpack-starter" target="_new">Angular2-Webpack-Starter</a>
+* <a href="https://github.com/angular-redux/ng2-redux" target="new">Ng2-Redux</a>
 
 # Todo
 I don't want to pollute the repo with lots of unneeded code, but I'd like to add some of the following features:
