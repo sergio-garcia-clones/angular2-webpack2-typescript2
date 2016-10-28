@@ -141,13 +141,10 @@ Vital parts of a real world application setup have been omitted due to various r
 
 
 # Acknowledgements
-This repo has been created with great inspiration from
 
 * <a href="https://github.com/gdi2290" target="_new">Patrick Stableton</a>
 * <a href="https://github.com/AngularClass/angular2-webpack-starter" target="_new">Angular2-Webpack-Starter</a>
 * <a href="https://github.com/angular-redux/ng2-redux" target="new">Ng2-Redux</a>
-
-# Todo
-I don't want to pollute the repo with lots of unneeded code, but I'd like to add some of the following features:
-
-* Code splitting and lazy loading of an ngModule
+* <a href="https://github.com/brandonroberts/angular2-router-loader">Angular2-router-loader</a>
+* <a href ="https://github.com/reactjs/redux">Redux</a>
+* <a href="https://github.com/angular/material2">Angular2 Material</a>
