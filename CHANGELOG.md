@@ -1,5 +1,10 @@
 # Changelog
 
+2016.10.28
+V0.0.12<br>
+Added lazy loading to the Examples module
+AoT build with lazy loading bootstraps insanely fast now
+
 2016.10.25
 V0.0.11<br>
 * Upgrade to Angular 2.1

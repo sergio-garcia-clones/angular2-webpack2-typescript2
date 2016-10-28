@@ -54,23 +54,13 @@ module.exports = {
           include: [helpers.root('src')]
         },
 
-      ],
-
-    loaders: [
-        loaders.TypescriptLoader(),
-        loaders.JsonLoader(),
-        loaders.CssLoader(),
-        loaders.FontLoader(),
-        loaders.HtmlLoader(),
-        loaders.SassLoader(),
-        loaders.SvgLoader()
-    ]
+      ]
   },
 
 
   plugins: [
 
-     new webpack.ContextReplacementPlugin(/angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/, __dirname),
+     //new webpack.ContextReplacementPlugin(/angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/, __dirname),
 
     //  Do type checking in a separate process, so webpack don't need to wait.
     new ForkCheckerPlugin(),

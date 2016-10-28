@@ -3,7 +3,6 @@ import { NgModule, ModuleWithProviders }      from '@angular/core';
 import { CommonModule }                       from '@angular/common';
 import { FormsModule,
          ReactiveFormsModule }                from '@angular/forms';
-import { HttpModule, Http }                   from '@angular/http';
 import { RouterModule }                       from '@angular/router';
 import { MaterialModule }                     from '@angular/material';
 
@@ -12,7 +11,6 @@ import { MaterialModule }                     from '@angular/material';
 
   imports: [
     CommonModule,
-    HttpModule,
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
@@ -24,7 +22,6 @@ import { MaterialModule }                     from '@angular/material';
 
   exports: [
     RouterModule,
-    HttpModule,
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
