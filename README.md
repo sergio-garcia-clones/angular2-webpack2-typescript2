@@ -17,7 +17,6 @@ Simple Angular2 starter using Webpack2/Typescript2/Material2
    * [Linting] (#linting)
 * [Omissions] (#omissions)
 * [Acknowledgements] (#acknowledgements)
-* [Todo] (#todo)
 
 
 # Introduction
@@ -73,6 +72,7 @@ The demo application showcases:
 * Application demos the material components as of current version
 * Uses ServiceWorker or AppCache for static caching
 * AoT template compilation
+* Lazy loading module
 
 ## Build Optimizations
 The build process performs the following optimizations:
