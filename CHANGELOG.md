@@ -4,6 +4,8 @@ V0.0.14<br>
 * Use yarn instead of npm for faster dependency installation
 * Added src/sw.js for extra service worker events
 * [Bugfix] Make sure app is reloaded on serviceworker changes
+* Upgraded to Angular2-Material Alpha 11
+* Upgraded to Angular 4.0.0-beta.1
 
 2016.10.28
 V0.0.12<br>
