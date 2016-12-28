@@ -90,7 +90,7 @@ var TypescriptLoader = function (params) {
     params = params || {};
 
     if (params.aot === true) {
-        routerLoader += '?aot=true&genDir=./compiled/src/frontend/app';
+        routerLoader += '?aot=true&genDir=./compiled/src/app';
     }
     return {
         test: /\.ts$/,

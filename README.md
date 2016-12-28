@@ -35,17 +35,21 @@ git clone https://github.com/spock123/angular2-webpack2-typescript2.git
 cd angular2-webpack2-typescript2
 
 # Initialize project
-yarn run clean
+yarn  clean
 
 # Install dependencies
 yarn install
 
-# [OPTIONAL] Start docker container so you can run commands from inside, if you wish
-npm run docker:bash
-
 # Start development
-yarn run serve
+yarn serve
 
+# Distribution build
+yarn build
+
+# Serve distribution build
+yarn serve:dist
+
+# 
 # Open localhost:8080 and enjoy the show
 ```
 
@@ -55,7 +59,7 @@ yarn run serve
 ## Tech Stack
 The repo uses the following technologies:
 
-* Angular 2
+* Angular
 * Webpack
 * Typescript
 * Angular2 Material
@@ -66,8 +70,8 @@ The repo uses the following technologies:
 ## Application
 The demo application showcases:
 
-* Angular2 module composition using shared modules.
-* Angular2 module routing
+* Angular module composition using shared modules.
+* Angular module routing
 * Angular2-Material components gathered in one shared module
 * Application demos the material components as of current version
 * Uses ServiceWorker or AppCache for static caching
@@ -88,48 +92,43 @@ The build process performs the following optimizations:
 # Getting Started
 ## Dependencies
 
-* `node` and `npm`
-* Ensure you're running the latest versions Node (v.4 or higher)  and NPM (v.3 or higher)
-* If you use `Docker`, have latest version installed which supports `docker-compose` v2
-
-
+* `node` and `npm/yarn`
+* Ensure you're running the latest versions Node (v.4 or higher)  and NPM (v.3 or higher), or yarn
 
 # Commands
 
 ## Dependencies
 Update dependencies if you add/remove packages in package.json
 ```bash
-npm install
+yarn install
 ```
 
 ## Development
-Serve development build with livereload on `localhost:8080`
+Serve development build with live reload on `localhost:8080`
 ```bash
-npm run serve
+yarn serve
 ```
 
 ## Build
-Create production build in `dist/frontend`
+Create production build in `dist/public`
 ```bash
-# Production build without AoT compilation
-npm run build
 
 # Production build with AoT compilation
-npm run build-aot
+yarn build
 
 ```
 
 ## Serve production build
 Serve the production built application on `localhost:8080`
 ```bash
-npm run serve:dist
+yarn serve:dist
 ```
 
 ## Linting
 Check your coding styles with with TsLint and Codelyzer:
 
 ```bash
-npm run tslint
+yarn tslint
 ```
 
 # Omissions
