@@ -38,7 +38,7 @@ module.exports = env => {
         devtool: 'cheap-module-source-map',
 
         output: {
-            path: helpers.root('dist/frontend'),
+            path: helpers.root('dist/public'),
             filename: '[name].bundle.js',
             sourceMapFilename: '[name].map',
             chunkFilename: '[id].chunk.js'
@@ -78,7 +78,7 @@ module.exports = env => {
             new NamedModulesPlugin(),
 
             new HtmlWebpackPlugin({
-                template: 'src/frontend/index.ejs',
+                template: 'src/index.ejs',
                 chunksSortMode: 'dependency',
                 filename: 'index.html'
             })
@@ -103,7 +103,7 @@ module.exports = env => {
                 }
             },
 
-            outputPath: helpers.root('dist/frontend')
+            outputPath: helpers.root('dist/public')
         },
 
         node: {

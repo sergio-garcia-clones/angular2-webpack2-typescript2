@@ -9,7 +9,7 @@
     "removeComments": true,
     "noImplicitAny": false,
     "suppressImplicitAnyIndexErrors": true,
-    "baseUrl": "./src/frontend",
+    "baseUrl": "./src",
     "outDir": "./compiled",
     "paths": {
         "root/*": ["app/root/*"],
@@ -21,9 +21,9 @@
   },
 
   "files": [
-    "src/frontend/app/bootstrap.ts",
-    "src/frontend/app/examples/examples.module.ts",
-    "src/frontend/app/custom_typings.d.ts"
+    "src/app/bootstrap.ts",
+    "src/app/examples/examples.module.ts",
+    "src/app/custom_typings.d.ts"
   ],
 
    "angularCompilerOptions": {

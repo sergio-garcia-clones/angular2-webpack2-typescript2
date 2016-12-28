@@ -35,16 +35,16 @@ git clone https://github.com/spock123/angular2-webpack2-typescript2.git
 cd angular2-webpack2-typescript2
 
 # Initialize project
-npm run clean
+yarn run clean
 
 # Install dependencies
-npm install
+yarn install
 
 # [OPTIONAL] Start docker container so you can run commands from inside, if you wish
 npm run docker:bash
 
 # Start development
-npm run serve
+yarn run serve
 
 # Open localhost:8080 and enjoy the show
 ```

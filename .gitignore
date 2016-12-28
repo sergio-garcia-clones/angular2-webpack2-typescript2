@@ -12,7 +12,7 @@ ehthumbs.db
 Thumbs.db
 node_modules
 typings
-dist/**
+dist/public
 /public/__build__/
 /src/*/__build__/
 __build__/**

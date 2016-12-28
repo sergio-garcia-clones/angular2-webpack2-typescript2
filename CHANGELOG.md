@@ -1,9 +1,14 @@
 # Changelog
+2016.12.28
+V0.0.14<br>
+* Use yarn instead of npm for faster dependency installation
+* Added src/sw.js for extra service worker events
+* [Bugfix] Make sure app is reloaded on serviceworker changes
 
 2016.10.28
 V0.0.12<br>
-Added lazy loading to the Examples module
-AoT build with lazy loading bootstraps insanely fast now
+* Added lazy loading to the Examples module
+* AoT build with lazy loading bootstraps insanely fast now
 
 2016.10.25
 V0.0.11<br>

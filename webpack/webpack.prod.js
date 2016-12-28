@@ -33,14 +33,14 @@ module.exports = env => {
   let config = webpackMerge(commonConfig, {
 
     entry: {
-      'app': (env && env.aot) ? './src/frontend/app/bootstrap.aot.ts' : './src/frontend/app/bootstrap.ts'
+      'app': (env && env.aot) ? './src/app/bootstrap.aot.ts' : './src/app/bootstrap.ts'
     },
 
     metadata: METADATA,
     debug: false,
     //devtool: 'source-map',
     output: {
-      path: helpers.root('dist/frontend'),
+      path: helpers.root('dist/public'),
       filename: 'assets/app/[name].[chunkhash].bundle.js',
       //sourceMapFilename: 'assets/app/[name].[chunkhash].bundle.map',
       chunkFilename: 'assets/app/[id].[chunkhash].chunk.js'
@@ -110,7 +110,7 @@ module.exports = env => {
 
 
       new HtmlWebpackPlugin({
-        template: 'src/frontend/index.ejs',
+        template: 'src/index.ejs',
         chunksSortMode: helpers.packageSort(['polyfills', 'vendor', 'app']),
         filename: 'index.html',
         minify: {
@@ -130,26 +130,38 @@ module.exports = env => {
         threshold: 2 * 1024
       }),
 
-
       new OfflinePlugin({
-        caches: 'all',
+  
+        caches: {
+          main: [
+            'index.html', 
+            'assets/app/*.js', 'assets/app/*.woff',
+            'assets/img/*.png', 'assets/img/*.jpg'
+            ]
+        },
+
         publicPath: '/',
-        updateStrategy: 'changed',
-        version: 'material-' + new Date(),
+        safeToUseOptionalCaches: true,
+        updateStrategy: 'all',
+        relativePaths: false,
+        version: 'material-[hash]' + new Date().getTime(),
         excludes: [
           '**/*.gz',
           '**/*.map'
         ],
         ServiceWorker: {
-          output: 'serviceworker.js'
+          output: 'serviceworker.js',
+          events: true,
+          entry: helpers.root('src/sw.js')
         },
 
         AppCache: {
           directory: '/'
         }
-      })
 
+    })
     ],
+ 
     /*
 
       tslint: {

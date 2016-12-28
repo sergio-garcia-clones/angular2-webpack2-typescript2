@@ -19,14 +19,14 @@ module.exports = {
   metadata  : METADATA,
   cache     : true,
   entry     : {
-    'polyfills': './src/frontend/app/polyfills.ts',
-    'vendor': './src/frontend/app/vendors.ts',
-    'app': './src/frontend/app/bootstrap.ts'
+    'polyfills': './src/app/polyfills.ts',
+    'vendor': './src/app/vendors.ts',
+    'app': './src/app/bootstrap.ts'
   },
 
   resolve: {
       extensions: ['', '.ts', '.js', '.json'],
-      root: helpers.root('src/frontend'),
+      root: helpers.root('src'),
       modulesDirectories: ['node_modules'],
       alias             : {
         'common'  : 'shared',
@@ -38,8 +38,7 @@ module.exports = {
   },
 
   module: {
-    //exprContextRequest: helpers.root('src/frontend/app'),
-    //exprContextRegExp: /.*\.ts/,
+  
     exprContextCritical: false,
 
      preLoaders: [
@@ -71,9 +70,10 @@ module.exports = {
     }),
 
     new CopyWebpackPlugin([
-        { from: 'src/frontend/assets', to: 'assets' },
-        { from: 'src/frontend/*.txt', flatten: true },
-        { from: 'src/frontend/manifest.json', flatten: true}
+        { from: 'src/assets', to: 'assets' },
+        { from: 'src/*.txt', flatten: true },
+        { from: 'src/sw.js', flatten: true },
+        { from: 'src/manifest.json', flatten: true}
     ])
 
   ],

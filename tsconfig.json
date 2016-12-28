@@ -9,7 +9,7 @@
     "sourceMap": true,
     "noEmitHelpers": true,
     "strictNullChecks": false,
-    "baseUrl": "./src/frontend",
+    "baseUrl": "./src",
     "paths": {
         "root/*": ["app/root/*"],
         "shared/*": ["app/shared/*"],
@@ -30,7 +30,7 @@
     ]
   },
    "include": [
-        "src/frontend/**/*.ts"
+        "src/**/*.ts"
     ],
   "exclude": [
     "node_modules",
